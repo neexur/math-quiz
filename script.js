@@ -32,11 +32,13 @@ var
 userQuestion = randomRandomQuestion(),
 questionHTML = document.querySelector("span.question"),
 answerHTML = document.querySelector("input[type=number]"),
-container = document.querySelector("div.container");
+streakHTML = document.querySelector("h1"),
+container = document.querySelector("div.container"),
+streak = 0;
 
 function updateQestion() {
-  userQuestion = randomRandomQuestion();
- questionHTML.innerHTML = userQuestion.question;
+  userQuestion = randomBasicQuestion();
+  questionHTML.innerHTML = userQuestion.question;
 }
 
 updateQestion()
@@ -46,9 +48,12 @@ answerHTML.onchange = () => {
   if(isCorrect){
     updateQestion(); answerHTML.value = ""; 
     container.style.animation = "correct .6s 1";
+    streak++;
   } else {
     container.style.animation = "shake .8s 1";
-  }
+    streak = 0;
+  };
+  streakHTML.innerHTML = "Streak: " + streak
 }
 container.onanimationend = () => {
   container.style.animation = ""
