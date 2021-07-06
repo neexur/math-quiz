@@ -1,3 +1,5 @@
+if (typeof(Storage) !== "undefined")  window.location = "./v"
+
 function randomNumber(min=0,max=1){
   if(min>=max) throw "Inavlid min value"; max -= min;
   return Math.round(Math.random()*max)+min;
@@ -92,9 +94,6 @@ answerHTML.onchange = () => {
 }
 container.onanimationend = () => {
   container.style.animation = ""
-}
-answerHTML.onfocus = () => {
-  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 allButtonsHTML.forEach( button => {
   button.onclick = () => vibrate(100)
