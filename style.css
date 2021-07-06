@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   user-select: none; flex-direction: column;
-  background: #ededed; font-family: sans-serif;
+  background: #e4e4e4; font-family: sans-serif;
 }
 input:focus {
   outline: none;
@@ -40,9 +40,9 @@ div.container {
   border-radius: 12px;
   display: flex; overflow: hidden;
   border-radius: 18px;
-  background: #ededed;
-  box-shadow:  9px 9px 18px #c5c5c5,
-               -9px -9px 18px #ffffff;
+  background: #e3e3e3;
+  box-shadow:  13px 13px 31px #cccccc,
+               -13px -13px 31px #fafafa;
 }
 div.container div {
   width: 100%; flex: none;
