@@ -1,0 +1,135 @@
+*{
+  padding: 0;margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none; flex-direction: column;
+  background: #ededed; font-family: sans-serif;
+}
+input:focus {
+  outline: none;
+}
+a,button {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font: bolder .9rem sans-serif;
+  text-decoration: none;
+  border: solid 2px #000;
+  background: #000;
+  color: #fff;
+  transition: .2s;
+}
+:is(a,button):hover {
+  border: solid 2px #000;
+  background: #0000; 
+  color: #000;
+}
+h1 {
+  font: bolder 3rem sans-serif;
+  margin: 20px;
+}
+
+div.container {
+  width: 300px; height: 250px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  display: flex; overflow: hidden;
+  border-radius: 18px;
+  background: #ededed;
+  box-shadow:  9px 9px 18px #c5c5c5,
+               -9px -9px 18px #ffffff;
+}
+div.container div {
+  width: 100%; flex: none;
+}
+div.container div.quiz {
+  width: 100%; padding: 30px; padding-right: 0;
+}
+div.container div.quiz span.question {
+  height: 30%;
+  font: 3.5rem sans-serif;
+  flex: none;
+}
+div.container div.quiz div.answer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+div.container div.quiz div.answer label {
+  margin-right: 10px; font-weight: bolder; 
+}
+div.container div.quiz div.answer input[type=number] {
+  width: 100px; padding: 6px; font-size: 1.6rem;
+  border: none; border-bottom: 2px solid #000;
+  background: #0000;
+}
+
+div.container div.record {
+  max-height: 100%; overflow: auto;
+}
+div.container div.record div {
+  height: 28%; padding: 0 40px;
+  border-bottom: 2px solid rgba(0,0,0,.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+div.container div.record div:last-child {
+  border-bottom: none;
+}
+div.container div.record div span:not(.score) {
+  font: bolder 1rem  sans-serif;
+}
+div.container div.record div button {
+  width: 100%; padding: 6px;
+  border: solid 2px #f33; 
+  background: #f33; color: #000;
+}
+div.container div.record div button:hover {
+  border-color: #f33;
+  background: #0000; color: #f33; 
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translatex(-1px);
+  }
+  
+  20%, 80% {
+    transform: translatex(2px);
+  }
+
+  30%, 50%, 70% {
+    transform: translatex(-4px);
+  }
+
+  40%, 60% {
+    transform: translatex(4px);
+    background: #f03030;
+  }
+}
+@keyframes correct {
+  20%,80% {background: #42d698}
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+*{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
