@@ -79,7 +79,7 @@ answerHTML.onchange = () => {
   if(isCorrect){
     updateQestion(); answerHTML.value = ""; 
     container.style.animation = "correct .6s 1";
-    records.correct++; records.streak++; vibrate(100,200)
+    records.correct++; records.streak++; vibrate(100)
     if(records.streak>records.bestStreak) 
       records.bestStreak=records.streak
   } else {
