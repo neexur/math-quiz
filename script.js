@@ -1,5 +1,3 @@
-if (typeof(Storage) !== "undefined")  window.location = "./v"
-
 function randomNumber(min=0,max=1){
   if(min>=max) throw "Inavlid min value"; max -= min;
   return Math.round(Math.random()*max)+min;
