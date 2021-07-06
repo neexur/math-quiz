@@ -55,13 +55,14 @@ function updateQestion() {
 }
 function updateInfo() {
   var savedrecords = window.localStorage;
+  var msg = "No record"
   if(savedrecords) {
-    correctHTML.innerHTML = savedrecords.correct;
-    wrongHTML.innerHTML = savedrecords.wrong;
-    streakHTML.innerHTML = savedrecords.streak;
-    bestStreakHTML.innerHTML = savedrecords.bestStreak;
-    answeredHTML.innerHTML = savedrecords.answered;
-    scoreHTML.innerHTML = Math.round(savedrecords.score)+"%";
+    correctHTML.innerHTML = savedrecords.correct || msg;
+    wrongHTML.innerHTML = savedrecords.wrong || msg;
+    streakHTML.innerHTML = savedrecords.streak || msg;
+    bestStreakHTML.innerHTML = savedrecords.bestStreak || msg;
+    answeredHTML.innerHTML = savedrecords.answered || msg;
+    scoreHTML.innerHTML = (Math.round(savedrecords.score) || 0)+"%";
     return
   }
 }
@@ -96,8 +97,6 @@ allButtonsHTML.forEach( button => {
   button.onclick = () => vibrate(100)
 })
 deleteButtonHTML.onclick = () => {
-  Object.keys(records).forEach(record => {
-    window.localStorage.setItem(record,0)
-  })
+  window.localStorage.clear()
   updateInfo()
 }
