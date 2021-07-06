@@ -93,6 +93,9 @@ answerHTML.onchange = () => {
 container.onanimationend = () => {
   container.style.animation = ""
 }
+answerHTML.onfocus = () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
 allButtonsHTML.forEach( button => {
   button.onclick = () => vibrate(100)
 })
