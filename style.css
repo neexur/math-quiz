@@ -85,6 +85,9 @@ div.container div.record div:last-child {
 div.container div.record div span:not(.score) {
   font: bolder 1rem  sans-serif;
 }
+div.container div.record div span:not(.score):nth-child(2) {
+  opacity: .5;
+}
 div.container div.record div button {
   width: 100%; padding: 6px;
   border: solid 2px #f33; 
