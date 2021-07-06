@@ -41,7 +41,7 @@ a.name {
 div.container {
   width: 300px; height: 250px;
   margin-bottom: 20px;
-  border-radius: 12px;
+  border-radius: 8px;
   display: flex; overflow: hidden;
   border-radius: 18px;
   background: #e3e3e3;
