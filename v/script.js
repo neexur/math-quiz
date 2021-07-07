@@ -53,7 +53,7 @@ answerHTML.onchange = () => {
     container.style.animation = "shake .8s 1";
   };
   answered++; score = correct/answered
-  scoreHTML.innerHTML = "Score: " + (Math.round(score*100)) + "%";
+  scoreHTML.innerHTML = "Score: " + (Math.round(score)*100) + "%";
 }
 container.onanimationend = () => {
   container.style.animation = ""
