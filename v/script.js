@@ -34,7 +34,7 @@ questionHTML = document.querySelector("span.question"),
 answerHTML = document.querySelector("input[type=number]"),
 scoreHTML = document.querySelector("h1"),
 container = document.querySelector("div.container"),
-score = 0;
+score = 0, correct = 0, answered = 0;
 
 function updateQestion() {
   userQuestion = randomRandomQuestion();
@@ -48,12 +48,12 @@ answerHTML.onchange = () => {
   if(isCorrect){
     updateQestion(); answerHTML.value = ""; 
     container.style.animation = "correct .6s 1";
-    score++;
+    correct++;
   } else {
     container.style.animation = "shake .8s 1";
-    score--;
   };
-  scoreHTML.innerHTML = "Score: " + score
+  answered++; score = correct/answered
+  scoreHTML.innerHTML = "Score: " + score + "%";
 }
 container.onanimationend = () => {
   container.style.animation = ""
