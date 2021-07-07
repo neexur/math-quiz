@@ -52,8 +52,8 @@ answerHTML.onchange = () => {
   } else {
     container.style.animation = "shake .8s 1";
   };
-  answered++; score = correct/answered
-  scoreHTML.innerHTML = "Score: " + (Math.round(score)*100) + "%";
+  answered++; score = Math.round(correct/answered*100)
+  scoreHTML.innerHTML = "Score: " + score + "%";
 }
 container.onanimationend = () => {
   container.style.animation = ""
