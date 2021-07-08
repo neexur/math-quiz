@@ -106,12 +106,12 @@ answerHTML.onchange = () => {
   if (isCorrect) {
     updateQestion(); answerHTML.value = "";
     container.style.animation = "correct .6s 1";
-    records.correct++; records.streak++; vibrate(100);
+    records.correct++; records.streak++;
     if (records.streak > records.bestStreak)
       records.bestStreak = records.streak;
   } else {
     container.style.animation = "shake .8s 1";
-    records.wrong++; records.streak = 0; vibrate(800);
+    records.wrong++; records.streak = 0; vibrate(400);
   }
   records.answered = records.correct + records.wrong;
   records.score = Math.round((records.correct / records.answered) * 100);
