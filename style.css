@@ -36,6 +36,13 @@ h1 {
 
 a.name {
   position: absolute; top: 10px; left: 10px;
+  padding-left: 30px;
+  background-image: url('https://super.so/icon/light/moon.svg');
+  background-repeat: no-repeat;
+  background-size: 16px; background-position: 8px 3px;
+}
+a.name:hover {
+  background-image: url('https://super.so/icon/dark/moon.svg');
 }
 
 div.container {
