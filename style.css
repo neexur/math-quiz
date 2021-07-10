@@ -29,10 +29,6 @@ a,button {
   background: #0000; 
   color: #000;
 }
-h1 {
-  font: bolder 3rem sans-serif;
-  margin: 20px;
-}
 
 a.name {
   position: absolute; top: 10px; left: 10px;
