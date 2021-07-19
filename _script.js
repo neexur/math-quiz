@@ -16,7 +16,7 @@ function randomBasicQuestion(min=1,max=100) {
   };
 }
 
-// Create random multiplication question #script
+// Create random complex(x,÷) question #script
 function randomComplexQuestion(min=3,max=12) {
   let firstNumber = randomNumber(min, max),
       secondNumber = randomNumber(min, max),
@@ -55,7 +55,7 @@ function daysBetween(date) {
   null
 }
 
-// Move to next question #DOM#script
+// Move to next question #DOM
 function updateQestion() {
   userQuestion = randomRandomQuestion();
   questionHTML.innerHTML = userQuestion.question;
@@ -63,7 +63,7 @@ function updateQestion() {
 
 // Change info after record have been manupilate #DOM
 function updateInfo() {
-  var msg = "..........";
+  var msg = "_____";
   correctHTML.innerHTML = records.correct || msg;
   wrongHTML.innerHTML = records.wrong || msg;
   streakHTML.innerHTML = records.streak || msg;
