@@ -11,16 +11,17 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <a class="name" target="_blank" 
-     href="https://github.com/nizarhazmi/math-quiz">Made by Nizar</a>
+  <a class="name" target="_blank" title="Github codes" href="https://github.com/nizarhazmi/math-quiz">Made by Nizar</a>
   <div class="container">
     <div class="quiz" id="quiz">
-      <span class="question"></span> <br> <br>
+      <span class="question"></span> <br><br>
       <div class="answer">
         <label for="answer">Answer:</label>
         <input type="number" id="answer">
       </div> <br><br>
       <a href="#record">Records</a>
+      <div class="option">
+      </div>
     </div>
     <div class="record" id="record">
       <div>
@@ -32,6 +33,7 @@
       <div><span>Correct answer</span><span class="correct"></span></div>
       <div><span>Wrong answer</span><span class="wrong"></span></div>
       <div><span>Answered</span><span class="answered"></span></div>
+      <div><span>Record since</span><span class="days"></span></div>
       <div><button>Delete record</button></div>
     </div>
   </div>
