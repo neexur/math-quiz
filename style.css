@@ -5,11 +5,13 @@
 }
 body {
   min-height: 100vh;
+  user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  user-select: none; flex-direction: column;
-  background: #e4e4e4; font-family: sans-serif;
+  flex-direction: column;
+  font-family: sans-serif;
+  background: #e4e4e4; 
 }
 input:focus {
   outline: none;
@@ -31,31 +33,34 @@ a,button {
 }
 
 a.name {
-  position: absolute; top: 10px; left: 10px;
-  padding-left: 30px;
-  background-image: url('https://super.so/icon/light/moon.svg');
+  position: absolute; left: 0; top: 0;
+  padding-left: 30px; margin: 12px;
+  background-image: url('https://super.so/icon/light/code.svg');
   background-repeat: no-repeat;
-  background-size: 16px; background-position: 8px 3px;
+  background-size: 16px; background-position: 9px 4px;
 }
 a.name:hover {
-  background-image: url('https://super.so/icon/dark/moon.svg');
+  background-image: url('https://super.so/icon/dark/code.svg');
 }
 
 div.container {
   width: 300px; height: 250px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  margin-top: 30px;
+  border-radius: 12px;
   display: flex; overflow: hidden;
   border-radius: 18px;
   background: #e3e3e3;
-  box-shadow:  13px 13px 31px #cccccc,
-               -13px -13px 31px #fafafa;
+  box-shadow: 13px 13px 31px #cccccc,
+              -13px -13px 31px #fafafa;
 }
 div.container div {
   width: 100%; flex: none;
+  scroll-margin: 0px;
 }
 div.container div.quiz {
-  width: 100%; padding: 30px; padding-right: 0;
+  width: 100%; padding: 30px; 
+  padding-right: 0;
+  overflow: auto;
 }
 div.container div.quiz span.question {
   height: 30%;
@@ -80,7 +85,7 @@ div.container div.record {
   max-height: 100%; overflow: auto;
 }
 div.container div.record div {
-  height: 70px; padding: 0 40px;
+  height: 70px; padding: 0 34px;
   border-bottom: 2px solid rgba(0,0,0,.2);
   display: flex;
   justify-content: space-between;
@@ -90,34 +95,31 @@ div.container div.record div:last-child {
   border-bottom: none;
 }
 div.container div.record div span:not(.score) {
-  font: bolder 1rem  sans-serif;
+  font: bolder 1rem sans-serif;
 }
 div.container div.record div span:not(.score):nth-child(2) {
-  opacity: .5;
+  opacity: .5; text-align: right;
 }
 div.container div.record div button {
   width: 100%; padding: 6px;
-  border: solid 2px #f33; 
+  border: solid 2px #f33;
   background: #f33; color: #000;
 }
 div.container div.record div button:hover {
   border-color: #f33;
-  background: #0000; color: #f33; 
+  background: #0000; color: #f33;
 }
 
 @keyframes shake {
   10%, 90% {
     transform: translatex(-1px);
   }
-  
   20%, 80% {
     transform: translatex(2px);
   }
-
   30%, 50%, 70% {
     transform: translatex(-4px);
   }
-
   40%, 60% {
     transform: translatex(4px);
     background: #f03030;
